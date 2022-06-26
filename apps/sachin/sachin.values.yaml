@@ -21,7 +21,7 @@ spec:
         ports:
         - containerPort: 3000
         env:
-        - name: USER_NAME
+        - name: USER_NAMEs
           valueFrom:
             secretKeyRef:
               name: mongo-secret
