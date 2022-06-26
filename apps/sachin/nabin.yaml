@@ -1,1 +1,22 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nabin-deployment
+  labels:
+    app: webapp
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sachin
+  template:
+    metadata:
+      labels:
+        app: sachin
+    spec:
+      containers:
+      - name: webapp
+        image: sachinshakya507/hellonode:latest
+        ports:
+        - containerPort: 3000
